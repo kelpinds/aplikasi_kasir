@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DetailPenjualanController;
 use App\Http\Controllers\KasirController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PenjualanController;
@@ -24,3 +25,8 @@ Route::get('laporan_penjualan/', [ProdukController::class, 'laporan_penjualan'])
 Route::get('data_barang/', [PenjualanController::class, 'data_barang']);
 Route::get('data/', [PenjualanController::class, 'data']);
 Route::post('penjualan_admin/', [PenjualanController::class,'registration_transaction_admin']);
+Route::get('produk/hapus/{produk_id}',[ProdukController::class,'destroy_produk']);
+Route::get('reguser/', [PelangganController::class, 'reguser']);
+Route::post('reguserr/', [PelangganController::class,'reguserr']);
+Route::get('stok/', [DetailPenjualanController::class, 'stok']);
+Route::post('stokk/', [DetailPenjualanController::class,'stokk']);

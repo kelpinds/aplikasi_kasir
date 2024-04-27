@@ -82,28 +82,27 @@
 
     <section class="container">
         <h2>Selamat Datang di Dashboard Kasir</h2>
-        <table>
+        @foreach ($data_admin as $item)
+        <table class="table">
             <thead>
-                <tr>
-                    <h2>nama</h2>
-                    <h2>alamat</h2>
-                    <h2>telepon</h2>
-                    <h2>akses</h2>
-                </tr>
+              ...
             </thead>
             <tbody>
-                @foreach ($data_admin as $item)
-                    <tr>
-
-                        <h2>{{ $item->nama }}</h2>
-                        <h2>{{ $item->alamat }}</h2>
-                        <h2>{{ $item->telepon }}</h2>
-                        <h2>{{ $item->akses }}</h2>
-                    </tr>
-                    <!-- tambahkan baris lain sesuai kebutuhan -->
-                @endforeach
+              <tr class="table-active">
+                ...
+              </tr>
+              <tr>
+                ...
+              </tr>
+              <tr>
+                <th scope="row">{{ $item->nama }}</th>
+                <td colspan="2" class="table-active">{{ $item->telepon }}</td>
+                <td>{{ $item->alamat }}</td>
+                <td colspan="2" class="table-active">{{ $item->akses }}</td>
+              </tr>
             </tbody>
-        </table>
+          </table>
+        @endforeach
         <h2>Dashboard ini memberikan akses cepat untuk mengelola transaksi dan melihat laporan penjualan.</h2>
     </section>
 </body>

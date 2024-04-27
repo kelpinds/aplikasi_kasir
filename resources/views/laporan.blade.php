@@ -124,7 +124,7 @@
                         <td>{{ $item->stok }}</td>
                         <td><a href="{{ url('#') }}" class="btn btn-success btn-sm">
                                 <i class="bi bi-pencil-square">Edit</i></a>
-                        <a href="{{ url('#') }}" class="btn btn-danger btn-sm">
+                        <a href="{{url('produk/hapus/'.$item->produk_id)}}" class="btn btn-danger btn-sm">
                                 <i class="bi bi-trash-fill">Hapus</i></a></td>
                     </tr>
                     <!-- tambahkan baris lain sesuai kebutuhan -->

@@ -30,4 +30,12 @@ class ProdukController extends Controller
 
         return redirect('dashboard_user/');
     }
+
+    public function destroy_produk($produk_id){
+        $siswa = new produk();
+        $siswa = $siswa->find($produk_id);
+        $siswa->delete();
+        return back()->with('pesan', 'selamat, registrasi berhasil');
+    }
+
 }

@@ -36,6 +36,7 @@
       </div>
       <button type="submit" class="btn btn-primary btn-block">Login</button>
     </form>
+    <p class="mt-3">Don't have an account? <a href="reguser/">Sign up here</a></p>
   </div>
 </div>
 

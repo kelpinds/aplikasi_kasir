@@ -12,10 +12,26 @@ class PelangganController extends Controller
     {
         return view('login_pembelian');
     }
-
+    public function reguser()
+    {
+        return view('reguser');
+    }
     public function dashboard_user()
     {
         return view('dashboard_user');
+    }
+    public function reguserr(Request $request)
+    {
+        $V = new pelanggan();
+
+        $V->create([
+            'pelanggan_id' => $request->pelanggan_id,
+            'nama_pelanggan' => $request->nama_pelanggan,
+            'alamat' => $request->alamat,
+            'nomor_telepon' => $request->nomor_telepon
+        ]);
+
+        return redirect('login_pembelian/');
     }
 
     public function procces_login_user(Request $request)
